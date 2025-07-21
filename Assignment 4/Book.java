@@ -1,31 +1,39 @@
 public class Book {
 
-    String title;
-    boolean borrowed;
+    private String title;
+    private boolean borrowed;
 
     // Creates a new Book
     public Book(String bookTitle) {
         // Implement this method
+        title = bookTitle;
     }
    
     // Marks the book as rented
-    public void borrowed() {
+    public void rented() {
         // Implement this method
+        borrowed = true;
     }
-   
+
     // Marks the book as not rented
     public void returned() {
         // Implement this method
+        borrowed = false;
     }
    
     // Returns true if the book is rented, false otherwise
     public boolean isBorrowed() {
         // Implement this method
+        if (borrowed) {
+            return true;
+        }
+        return false;
     }
    
     // Returns the title of the book
     public String getTitle() {
         // Implement this method
+        return title;
     }
 
     public static void main(String[] arguments) {
